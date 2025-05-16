@@ -4,14 +4,26 @@
 {% block title %}Home - My Flask App{% endblock %}
 
 {% block content %}
-    <h1>AI Oracle</h1>
-    <p>{{message|safe}}</p>
-    <br>
-    <form method="POST">
-        <label for="question"><h3>How can I help you, in regards to AI?</h3></label>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>AI Assistant</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class="header-container">
+            <div class="header-title">AI Assistant</div>
+            <img src="{{ url_for('static', filename='robot.png') }}" alt="Robot" class="robot-img">
+        </div>
+        <div>
+            {{ message|safe }}
+        </div>
         <br>
-        <textarea id="question" name="question" rows="5" cols="40"></textarea><br>
-        <input class="subm_btn" type="submit" value="Submit">
-    </form>
-    
-{% endblock %}
+        <form method="POST">
+            <label for="question"><h3>How can I help you, in regards to AI?</h3></label>
+            <br>
+            <textarea id="question" name="question" rows="5" cols="40"></textarea><br>
+            <input class="subm_btn" type="submit" value="Submit">
+        </form>
+        
+    {% endblock %}

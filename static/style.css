@@ -42,3 +42,23 @@ textarea {
     background-color: #aaaaff;
 
 }
+
+.header-container {
+    position: relative; /* Ensure positioning context for .robot-img */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.header-title {
+    font-size: 2em;
+    font-weight: bold;
+}
+.robot-img {
+    position: absolute;
+    top: 30px;
+    right: 100px;
+    height: 150px; /* Adjust as needed */
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
