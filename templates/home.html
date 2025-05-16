@@ -1,0 +1,17 @@
+<!-- home.html -->
+{% extends "base.html" %}
+
+{% block title %}Home - My Flask App{% endblock %}
+
+{% block content %}
+    <h1>AI Oracle</h1>
+    <p>{{message|safe}}</p>
+    <br>
+    <form method="POST">
+        <label for="question"><h3>How can I help you, in regards to AI?</h3></label>
+        <br>
+        <textarea id="question" name="question" rows="5" cols="40"></textarea><br>
+        <input class="subm_btn" type="submit" value="Submit">
+    </form>
+    
+{% endblock %}
